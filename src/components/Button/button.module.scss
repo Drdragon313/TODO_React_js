@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.button{
+    outline: none;
+    padding: 0.75rem 1.35rem;
+    border-radius: $borderRadius;
+    font-size: 1rem;
+    font-family: inherit;
+    background: $primary;
+    color: rgba($dark, 0.8);
+    border: 1px solid transparent;
+    transition: 0.3s ease all;
+    margin: 1rem;
+
+    &:hover{
+        border-color:$primary;
+        background-color:linear-gradient((rgba($primary, 0.2),rgba($primary,0.3)));
+        color: aliceblue;
+    }
+}
