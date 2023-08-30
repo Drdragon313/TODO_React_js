@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from "./header.module.scss"
 import Button from "../Button/button"
-
+import { Link } from 'react-router-dom';
 const Header = () => {
 
   return (
@@ -13,14 +13,15 @@ const Header = () => {
         <nav className={classes.header__content__nav}>
             <ul>
                 <li>
-                    <a href='/'>page one</a>
+                    <Link to={'/home'}>Home</Link>
                 </li>
                 <li>
-                    <a href='/'>page two</a>
+                    <Link to={'/profile'}>Profile</Link>
                 </li>
                 <li>
-                    <a href='/'>page three</a>
+                    <Link to={'/'}><Button text="Sign Out"></Button></Link>
                 </li>
+               
             </ul>
             
         </nav>
