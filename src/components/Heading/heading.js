@@ -1,10 +1,8 @@
-import React from 'react';
-import classes from "./heading.module.scss"
+import React from "react";
+import classes from "./heading.module.scss";
 
-const Heading=({text})=> {
-  return (
-    <h2 className={classes.heading}>{text}</h2>
-  )
-}
+const Heading = ({ text }) => {
+  return <h2 className={classes.heading}>{text}</h2>;
+};
 
-export default Heading
+export default Heading;

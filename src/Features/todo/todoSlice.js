@@ -8,8 +8,8 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     setInititalState: (state, action) => {
-        const listOfTodos = action.payload;
-        state.todos = listOfTodos;
+      const listOfTodos = action.payload;
+      state.todos = listOfTodos;
     },
     addTodoSlice: (state, action) => {
       const todo = {
@@ -22,28 +22,27 @@ export const todoSlice = createSlice({
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
     editTodoSlice: (state, action) => {
-        const { id, newText } = action.payload;
-        const existingTodo = state.todos.find((todo) => todo.id === id);
-        if (existingTodo) {
-          existingTodo.text = newText;
-        }
-      },
-    toggleDoneSlice:(state, action)=>{
-        const { id  } = action.payload;
-        const existingTodo = state.todos.find((todo) => todo.id === id);
-        if (existingTodo) {
-          existingTodo.done = !existingTodo.done;
-        }
-
-
-        // const { id} = action.payload;
-        // const updatedTodos = state.todos.map((todo) =>
-        // todo.id === id ? { ...todo, done: !todo.done } : todo
-    //   );
-    //   updatedTodos.id=id
-    }
-  }
+      const { id, newText } = action.payload;
+      const existingTodo = state.todos.find((todo) => todo.id === id);
+      if (existingTodo) {
+        existingTodo.text = newText;
+      }
+    },
+    toggleDoneSlice: (state, action) => {
+      const { id } = action.payload;
+      const existingTodo = state.todos.find((todo) => todo.id === id);
+      if (existingTodo) {
+        existingTodo.done = !existingTodo.done;
+      }
+    },
+  },
 });
 
-export const { addTodoSlice, removeTodo,editTodoSlice,toggleDoneSlice, setInititalState } = todoSlice.actions;
+export const {
+  addTodoSlice,
+  removeTodo,
+  editTodoSlice,
+  toggleDoneSlice,
+  setInititalState,
+} = todoSlice.actions;
 export default todoSlice.reducer;

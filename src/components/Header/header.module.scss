@@ -70,7 +70,9 @@ transition: 0.3s ease all;
             
                li{
                 text-decoration: none;
-                padding: 0.25rem 1.35rem;
+                padding: 0.1rem 0.2rem;
+                margin: 10px;
+                margin-left: auto;
                 border-radius: $borderRadius;
                 transition: 0.3s ease all;
                 font-weight: bold;
@@ -85,6 +87,7 @@ transition: 0.3s ease all;
                 a{
                     color: rgb(241, 169, 12);
                 }
+             
             }
         
         }
